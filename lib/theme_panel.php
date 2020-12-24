@@ -17,7 +17,7 @@ $args = array(
 Redux::set_args( $opt_name, $args );
 
 Redux::set_section( $opt_name, array(
-		'title'  => esc_html__( 'Top Header', 'welearner' ),
+		'title'  => esc_html__( 'Testimonial', 'welearner' ),
 		'id'     => 'basic',
 		'desc'   => esc_html__( 'Top Header', 'welearner' ),
 		'icon'   => 'el el-home',
@@ -67,7 +67,7 @@ Redux::set_section( $opt_name, array(
 );
 
 
-//------------footer part--------------
+//------------counter--------------
 
 
 Redux::set_section( $opt_name, array(
@@ -93,24 +93,21 @@ Redux::set_section( $opt_name, array(
 			array(
 				'id'    => 'text1',
 				'type'  => 'text',
-				'title' => esc_html__( 'Copy Right Text:', 'welearner' )
+				'title' => esc_html__( 'Text:', 'welearner' )
 			),			array(
 				'id'    => 'number1',
 				'type'  => 'text',
-				'title' => esc_html__( 'number:', 'welearner' )
+				'title' => esc_html__( 'number to:', 'welearner' )
 			),
-			array(
-				'id'    => 'text2',
+					array(
+				'id'    => 'speed',
 				'type'  => 'text',
-				'title' => esc_html__( 'Link Text:', 'welearner' )
+				'title' => esc_html__( ' speed number :', 'welearner' )
 			),
 
-			array(
-				'id'          => 'text3',
-				'type'        => 'text',
-				'placeholder' => '',
-				'title'       => esc_html__( 'Text:', 'welearner' )
-			),
+
+
+
 		)
 	)
 );
@@ -119,25 +116,7 @@ Redux::set_section( $opt_name, array(
 
 
 
-//-------------------------------end footer part----------------------------------------
 
-Redux::set_section( $opt_name, array(
-		'title'  => esc_html__( 'Preloader', 'welearner' ),
-		'id'     => 'preloader',
-		'desc'   => esc_html__( 'welearner Preloader', 'welearner' ),
-		'icon'   => 'el el-adjust',
-		'fields' => array(
-			array(
-				'id'      => 'welearner_preloader',
-				'type'    => 'switch',
-				'on'      => 'Show',
-				'off'     => 'Hide',
-				'default' => true,
-				'title'   => esc_html__( 'Show or Hide Preloader', 'welearner' )
-			),
-		)
-	)
-);
 
 
 

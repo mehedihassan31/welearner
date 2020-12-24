@@ -276,3 +276,31 @@ function welearner_theme_panel_value($key, $default = '')
 		return $default;
 	}
 }
+
+
+
+//metabox
+
+function welearner_price_meta_box(){
+
+	add_meta_box('price','Add price','price','course','normal');
+}
+
+add_action('add_meta_boxes','welearner_price_meta_box');
+
+function price($post){
+	?>
+	<p><input type="number" name="price" placeholder="price"
+	          value="<?php echo get_post_meta($post->ID,'price',true);?>"></p>
+
+	<?php
+}
+
+
+function welearner_price_save($post_id){
+
+	update_post_meta($post_id,'price',$_POST['price']);
+
+}
+
+add_action('save_post','welearner_price_save');

@@ -14,7 +14,7 @@ $rating = new WP_Query(
 ?>
 <div class="container">
 	<div class="div">
-		<h2>Top<br>rated</h2>
+		<h2><?php _e('Toprated','welearner');?></h2>
 	</div>
 	<div class="row">
 		<?php
@@ -33,6 +33,8 @@ $rating = new WP_Query(
 						<?php
 					}
 					?>
+
+                    <div><p> price: <?php echo get_post_meta($post->ID,'price',true);?> </p></div>
 					<div class="card-body">
 						<a href="#" class="card-title"><h5><?php the_title(); ?> </h5></a>
 					</div>
